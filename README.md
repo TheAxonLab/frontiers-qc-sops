@@ -1,2 +1,2 @@
 # mriqc-sops
-Template repo for bootstrapping and maintaining MRI SOPs (Standard operation procedures)
+MRI-SOPs (Standard operation procedures) for quality control of functional MRI data with MRIQC and fMRIPrep

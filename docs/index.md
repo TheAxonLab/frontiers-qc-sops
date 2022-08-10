@@ -1,4 +1,4 @@
-# <Project Name\>: Standard Operating Procedures
+# Quality Control Research Topic: Standard Operating Procedures
 
 Standard Operating Procedures (SOPs) bundle the documentation that describes data collection so that experiments can robustly be repeated.
 Within your lab or your institution, the goal is that experimenters can carry out new data collection according to the overarching study plans with minimal supervision.
