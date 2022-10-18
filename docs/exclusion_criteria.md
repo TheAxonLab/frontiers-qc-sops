@@ -1,8 +1,8 @@
 The following lists the pre-defined exclusion criteria for a whole-brain, voxel-wise analyses of spatially standardized task and resting-state BOLD fMRI. Note that by “whole brain” we mean cortex and subcortical structures but not cerebellum.Our exclusion criteria are all based on the visual inspection of the individual MRIQC and fMRIPrep reports, so they are all qualitative criteria. Exclusion criteria are defined in reference to specific artifacts and qualitative aspects of BOLD and T1w images. Furthermore, we do not differentiate criteria for task and resting-state scans, because our defined scope was not specific enough (e.g., lacking in objectives to determine whether some regions are of particular interest), except for the hyperintensity of single slices criterion.
 
-**Exclusion criteria for unprocessed BOLD data based on the individual MRIQC visual report**
+# Exclusion criteria for unprocessed BOLD data based on the individual MRIQC visual report
 
-Summary
+## Summary
 1. Artifactual structures in the background
 1. Susceptibility distortion artifacts
     1. Signal drop-out
@@ -19,7 +19,7 @@ Summary
 1. Vertical strikes in the sagittal plane of the standard deviation map
 1. Data formatting issues
 
-Details
+## Details
 1. **Artifactual structures in the background (A)**
 
     Because no BOLD signal originates from the air surrounding the head, the background should not contain visible structures. However, signals sourcing from the object of interest can spill into the background through a number of imaging processes, e.g., aliasing ghosts, spill-over originating from moving and blinking eyes, or bulk head motion. Structures in the background are most clearly noticeable in MRIQC’s “background noise panel” view, but they frequently are also detectable in the standard deviation map view. Structure in the background is not a problem in itself as it is situated outside of the brain; the issue is that the latter artifact is likely overflowing on the brain, thus compromising brain signal. The aliasing ghost is a particular case of structure in the background, discussed in further detail in criterion C below. We classify under exclusion criteria A all other structures that do not correspond to an aliasing artifact.
@@ -56,75 +56,78 @@ Details
 
     As part of the NIfTI format (R.W. Cox et al. 2004), the file header contains metadata storing several relevant parameters, of which the orientation information is critical for the interpretability of the data. The orientation parameters indicate how the data matrix is stored on disk and enable visualizing rows and slices at the correct locations (Glen et al. 2020). However, mistakes may occur while recording information at the scanner, while converting DICOM to NIFTI format, or during a subsequent processing step. Such mistakes result in the brain image not being correctly visualized and preprocessed, with axes either being flipped (e.g., the anterior part of the brain is labeled as posterior) or switched (e.g., axial slices are interpreted as coronal ones). These issues may render the dataset unusable, e.g., if the orientation information describing whether the data array has been recorded from left to right or right to left is lost.
 
-**Criteria for flagging unprocessed T1w data based on the individual MRIQC visual report**
+# Criteria for flagging unprocessed T1w data based on the individual MRIQC visual report
 
 Given our planned analysis, the T1w image will be used solely to guide the spatial alignment to the standard MNI152NLin2009cAsym template. In addition, surface reconstructions from the T1w image will guide the co-registration of structural and functional (BOLD) images in fMRIPrep. Since the latter preprocessing steps are relatively robust to structural images with mild artifacts, we do not impose exclusion criterion on the unprocessed T1w images. However, we annotate subjects with visible artifacts in the T1w images in order to ensure rigorous scrutinizing of spatial normalization and surface reconstruction outputs from fMRIPrep (if both modalities passed the first QC checkpoint with MRIQC). The explanation and the description of the flagging criteria 1 to 7 are the same as their counterpart in the previous section. 
 
-Summary
-1. Artifactual structures in the background
-1. Susceptibility distortion artifacts
-1. Aliasing ghosts
-1. Wrap-around that overlaps with the brain 
-1. Data formatting issues
-1. Motion-related and Gibbs ringing
-1. Extreme intensity non-uniformity
-1. Eye spillover
+## Summary
 
-Details
+10. Artifactual structures in the background
+11. Susceptibility distortion artifacts
+12. Aliasing ghosts
+13. Wrap-around that overlaps with the brain 
+14. Data formatting issues
+15. Motion-related and Gibbs ringing
+16. Extreme intensity non-uniformity
+17. Eye spillover
 
-1. **Motion-related and Gibbs ringing (O)** 
+## Details
+
+16. **Motion-related and Gibbs ringing (O)** 
 
     Large head motion during the acquisition of T1w images often expresses itself with the appearance of concentric ripples throughout the scan. In the most subtle cases, motion-related ripples look similar to the fine lines generated by Gibbs ringing. The latter emerges as a consequence of the truncation of the Fourier series approximation and appears as multiple fine lines immediately adjacent and parallel to high-contrast interfaces. While Gibbs ringing is limited to the adjacency of sharp steps in intensity at tissue interfaces, the ripples caused by motion generally span up to the whole brain, and are primarily visible in the sagittal view of MRIQC’s mosaic views.
 
-1. **Intensity non-uniformity (P)**
+17. **Intensity non-uniformity (P)**
 
     Intensity non-uniformity is characterized by a smooth variation (low spatial frequency) of intensity throughout the brain, caused by the stronger signal sensed in the proximity of coils. It is noticeable on the zoomed-in view on the T1w image. Furthermore, intensity non-uniformity can be a problem for automated processing methods that assume a type of tissue (e.g., white matter (WM)) is represented by voxels of similar intensities across the whole brain. An extreme intensity non-uniformity can also be the sign of a coil failure.
 
-1. **Eye spillover (Q)**
+18. **Eye spillover (Q)**
 
     Eye movements may trigger the leakage of the signal from the eyes through the imaging axis with the lowest bandwidth (i.e., acquired faster) potentially overlapping signal from brain tissue. On data preserving facial features the streak of signal is visible in the background at the levels of the eyes. However, because all the data in this study are openly shared after defacing (for privacy protection reasons), the signal around the face has been zeroed, we thus expect this leakage to not be visible (Provins, Alemán-Gómez, et al. 2022). A strong signal leakage can however be noticeable on the zoomed-in view of the T1w image (see Figure S10G for an example of the latter case).
 
-**Exclusion criteria on minimally pre-processed data based on the fMRIPrep visual report**
+# Exclusion criteria on minimally pre-processed data based on the fMRIPrep visual report
 
-Summary
-1. Failure in normalization to MNI space
-1. Inaccurate brain mask
-1. Residual susceptibility distortion
-1. Error in brain tissue segmentation of T1w images
-1. Surface reconstruction problem
-1. Co-registration problem
-1. Regions identified for the extraction of nuisance regressors potentially cover neural signal sources
+## Summary
 
-Details
-1. **Failure in normalization to MNI space (R)**
+19. Failure in normalization to MNI space
+20. Inaccurate brain mask
+21. Residual susceptibility distortion
+22. Error in brain tissue segmentation of T1w images
+23. Surface reconstruction problem
+24. Co-registration problem
+25. Regions identified for the extraction of nuisance regressors potentially cover neural signal sources
+
+## Details
+
+19. **Failure in normalization to MNI space (R)**
 
     Because the final conclusions of the hypothetical analysis are based on data normalized to a standard template, it is crucial that the normalization is successful. The fMRIPrep report contains a widget to assess the quality of the normalization to MNI space. The widget flickers between the MNI template and the individual’s T1w image normalized to that template. To verify successful normalization, we assessed the correct alignment of the following structures (in order of importance) : 1. ventricles, 2. subcortical regions, 3. corpus callosum, 4. cerebellum and, 5. cortical gray matter (GM). A misalignment of the ventricles, the subcortical regions, or the corpus callosum led to immediate exclusion, however we were more lenient with the misalignment of cortical GM because volumetric (image) registration may not resolve substantial inter-individual differences (e.g., a sulcus missing in an individual’s brain but typically present in the population of the template). Any extreme stretching or distortion of the T1w image also indicates a failed normalization.
 
-1. **Inaccurate brain mask (S)**
+20. **Inaccurate brain mask (S)**
 
     The brain mask computed from the T1w image is shown in the “brain mask and brain tissue segmentation of the T1w” panel under the anatomical section of the fMRIPrep visual report. The latter should follow closely the contour of the brain. An inaccurate brain mask presents “bumps” surrounding high intensity areas of signal outside of the cortex (e.g., a mask including patches of the skull), and/or holes surrounding signal drop-out regions. Having an accurate brain mask makes the downstream preprocessing of an fMRI scan faster (excluding voxels of non-interest) and more accurate (less bias from voxels of non-interest), that is why it is important to discard subjects for which the brain mask is not well defined. Note that the brain mask that is plotted in the “brain mask and (anatomical/temporal) CompCor ROIs” panel under the functional section is not identical to the brain mask mentioned in this paragraph, as it is computed from the BOLD image. The brain mask extracted from the BOLD image is used mostly for confounds extraction, thus it does not follow the same quality criteria.
 
-1. **Residual susceptibility distortion (T)**
+21. **Residual susceptibility distortion (T)**
 
     For cases that were not excluded following criterion B, susceptibility distortions were evaluated with the fMRIPrep report after preprocessing.  Any observation of susceptibility distortion artifacts led to the exclusion of the scan.
 
-1. **Error in brain tissue segmentation of T1w images (U)**
+22. **Error in brain tissue segmentation of T1w images (U)**
 
     The panel “brain mask and brain tissue segmentation of the T1w” under the anatomical section of the fMRIPrep report shows contours delineating brain tissue segmentations overlaid on the T1w image. To confirm the good quality of the segmentation, we first verified that the pink contour accurately outlined the ventricles, whereas the blue contour followed the boundary between GM and WM. The first exclusion criteria was thus the inclusion of tissues other than the tissue of interest in the contour delineations. T1w scans showcasing low signal-to-noise ratio because of the presence of thermal noise, will present scattered misclassified voxels within piecewise-smooth regions (generally more identifiable in the WM and inside the ventricles). These scans are excluded except for images where these voxels are only present at subcortical structures (e.g., thalamus) or nearby tissue boundaries. In the latter case, the misclassification is a result of partial volume effects (i.e., indeed such voxels contain varying fractions of two or more tissues).
 
-1. **Surface reconstruction problem (V)**
+23. **Surface reconstruction problem (V)**
 
     The WM surface (blue outline) and the pial surface (red outline) reconstructed with FreeSurfer (version 7.0.1, (Fischl 2012)) are visualized overlaid on the participant’s T1w image, in the panel dedicated to surface reconstruction visualization under the anatomical section of the fMRIPrep report. Since the cerebellum and the brainstem are excluded from the surface reconstruction; the outlines will not include these areas. QC assessment of FreeSurfer outcomes is comprehensively covered elsewhere (e.g., White et al. 2018; Klapwijk et al. 2019), and fMRI studies using vertex-wise (surface) analyses should rigorously assess these surfaces. In this protocol, we only excludedata when the reconstructed surfaces are extremely inaccurate, which typically only happens in the presence of artifacts easily captured previously by MRIQC (section "Criteria for flagging unprocessed T1w data based on the individual MRIQC visual report"). 
 
-1. **Co-registration problem (W)**
+24. **Co-registration problem (W)**
 
     The fMRIPrep report contains a widget to assess the accuracy of the alignment of BOLD runs into the individual’s anatomical reference (co-registration). The widget flickers between the reference T1w image and the BOLD average co-registered onto it. Extracted brain surfaces’ contours are represented as further anatomical cues. Here, we checked the alignment of image intensity edges and the anatomical landmarks (e.g the ventricles and the corpus callosum) between the BOLD and the T1w images.
 
-1. **Regions identified for the extraction of nuisance regressors potentially cover neural signal sources (X)**
+25. **Regions identified for the extraction of nuisance regressors potentially cover neural signal sources (X)**
 
     fMRIPrep calculates CompCor (Behzadi et al. 2007) nuisance regression time series for the removal of physiological and head motion artifacts from BOLD scans. Two families of CompCor methodologies are provided within the outputs: temporal CompCor (tCompCor) uses voxels presenting the highest temporal variability, and anatomical CompCor (aCompCor) extracts signal from regions of no interest (e.g., a conservative mask including core areas of the ventricles and the WM). fMRIPrep provides a panel to assess the adequacy of these regions from which CompCor will extract regressors (“brain mask and anatomical/temporal CompCor ROIs”). In addition to the masks corresponding to CompCor, the “crown” mask can also be assessed in this visualization. If the study plan states the use of CompCor or brain-edge regressors, it is critical to exclude BOLD runs where any of these masks substantially overlap regions of interest.
 
-**References**
+# References
 
 * Aquino, Kevin M., Ben D. Fulcher, Linden Parkes, Kristina Sabaroedin, and Alex Fornito. 2020. “Identifying and Removing Widespread Signal Deflections from FMRI Data: Rethinking the Global Signal Regression Problem.” NeuroImage 212 (May): 116614. <https://doi.org/10.1016/j.neuroimage.2020.116614>.
 
