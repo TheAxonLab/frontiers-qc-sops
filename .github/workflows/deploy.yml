@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
-        path: mkdocs
+        path: 'mkdocs'
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
       with:
@@ -23,10 +23,10 @@ jobs:
         git config --global user.name "nipreps-bot"
         python -m pip install --upgrade pip
         pip install -r mkdocs/requirements.txt
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
-        ref: gh-pages
-        path: www
+        ref: 'gh-pages'
+        path: 'www'
     - name: Clean up master
       run: |
         cd www/
