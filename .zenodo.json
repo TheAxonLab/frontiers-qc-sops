@@ -1,0 +1,66 @@
+{
+    "title": "Quality Control in functional MRI studies with MRIQC and fMRIPrep",
+    "description": "<p>A quality control protocol to assess the quality of BOLD fMRI data with MRIQC and fMRIPrep</p>",
+    "creators": [
+    {
+        "affiliation": "Department of Radiology, Lausanne University Hospital and University of Lausanne, Lausanne, Switzerland",
+        "name": "Provins, Celine",
+        "orcid": "0000-0002-1668-9629"
+        },
+      {
+        "affiliation": "Department of Radiology, Lausanne University Hospital and University of Lausanne, Lausanne, Switzerland",
+        "name": "Esteban, Oscar",
+        "orcid": "0000-0001-8435-6191"
+      }
+    ],
+    "contributors": [
+    {   
+        "affiliation": "Department of Neuroimaging, Institute of Psychiatry, Psychology & Neuroscience, King’s College London, London, United Kingdom",
+        "name": "MacNicol, Eilidh ",
+        "orcid": "0000-0003-3715-7012",
+        "type": "Researcher"
+        },
+    {
+        "affiliation": "Department of Psychiatry, Icahn School of Medicine at Mount Sinai, New York City, NY, USA",
+        "name": "Seeley, Saren H.",
+        "orcid": "0000-0002-9493-8512",
+        "type": "Researcher"
+    },
+      {
+        "affiliation": "Department of Radiology, Lausanne University Hospital and University of Lausanne, Lausanne, Switzerland",
+        "name": "Hagmann, Patric",
+        "orcid": "0000-0002-2854-6561",
+        "type": "Supervisor"
+      }
+    ],
+    "keywords": [
+      "neuroimaging",
+      "quality control",
+      "quality assessment",
+      "exclusion criteria",
+      "fMRI",
+      "fMRIPrep",
+      "MRIQC"
+    ],
+    "access_right":"open",
+    "license": "cc-zero",
+    "related_identifiers": [
+      {
+        "identifier": "https://fmriprep.org",
+        "relation": "documents",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://mriqc.readthedocs.io/en/latest/",
+        "relation": "documents",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.1038/s41596-020-0327-3",
+        "relation": "isSupplementTo",
+        "scheme": "doi"
+      }
+    ],
+    "upload_type": "publication",
+    "publication_type": "report"
+  }
