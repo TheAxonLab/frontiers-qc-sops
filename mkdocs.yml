@@ -1,7 +1,7 @@
 site_name: "MRIQC :: SOPs"
-site_description: MRI standard operating procedures (SOPs) for quality assessment and quality control (QA/QC)
+site_description: Standard operating procedures (SOPs) associated to our "Quality Control in functional MRI studies with MRIQC and fMRIPrep" paper. 
 site_author: The AxonLab
-site_url: https://github.com/TheAxonLab/mriqc-sops-QC.git
+site_url: https://github.com/TheAxonLab/frontiers-sops-QC.git
 google_analytics: ['UA-170131052-1', 'www.nipreps.org']
 
 # Copyright
@@ -10,15 +10,8 @@ copyright: Copyright &copy; 2022
 nav:
     - Home: index.md
     - Change History: changes.md
-    - Recruitment, Scheduling, and Screening:
-      - Introduction: recruitment-scheduling-screening/index.md
-      - Example 1: recruitment-scheduling-screening/example1.md
-      - Example 2: recruitment-scheduling-screening/example2.md
-    - Data collection: data-collection.md
-    - Data storage: data-storage.md
-    - After the session: post-session.md
     - Quality Assessment and Control: qa-qc.md
-    - Preprocessing: preprocessing.md
+    - Exclusion Criteria: exclusion_criteria.md
     - Release of data: release.md
 theme:
   name: material
