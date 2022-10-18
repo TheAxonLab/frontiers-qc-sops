@@ -1,6 +1,6 @@
 {
     "title": "Quality Control in functional MRI studies with MRIQC and fMRIPrep",
-    "description": "<p>A quality control protocol to assess the quality of BOLD fMRI data with MRIQC and fMRIPrep</p>",
+    "description": "<p>Standard operating procedures (SOPs) associated to our 'Quality Control in functional MRI studies with MRIQC and fMRIPrep' paper</p>",
     "creators": [
     {
         "affiliation": "Department of Radiology, Lausanne University Hospital and University of Lausanne, Lausanne, Switzerland",
