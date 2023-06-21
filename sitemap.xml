@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/TheAxonLab/frontiers-sops-QC.git/</loc>
-         <lastmod>2022-10-18</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/TheAxonLab/frontiers-sops-QC.git/changes/</loc>
-         <lastmod>2022-10-18</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/TheAxonLab/frontiers-sops-QC.git/exclusion_criteria/</loc>
-         <lastmod>2022-10-18</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/TheAxonLab/frontiers-sops-QC.git/qa-qc/</loc>
-         <lastmod>2022-10-18</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/TheAxonLab/frontiers-sops-QC.git/release/</loc>
-         <lastmod>2022-10-18</lastmod>
+         <lastmod>2023-06-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

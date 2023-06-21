@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://github.com/TheAxonLab/frontiers-sops-QC.git/qa-qc/">
       
+      
+        <link rel="prev" href="../changes/">
+      
+      
+        <link rel="next" href="../exclusion_criteria/">
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
     
     
       
@@ -23,11 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
-        
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
       
       
 
@@ -55,14 +57,11 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -82,7 +81,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="MRIQC :: SOPs" class="md-header__button md-logo" aria-label="MRIQC :: SOPs" data-md-component="logo">
       
@@ -138,7 +139,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -222,7 +223,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
@@ -400,38 +401,38 @@
 <p>The following lists the steps in a quality assessment/quality control (QA/QC) procedure on functional MRI data using MRIQC and fMRIPrep:</p>
 <h2 id="before-starting-qaqc">Before starting QA/QC<a class="headerlink" href="#before-starting-qaqc" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Create a standard operating procedures (SOPs) document for the study. The template https://github.com/nipreps/mriqc-sops has been design to facilitate this step.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Narrow down the scope of the planned analysis. Here, the planned analysis correponds to whole-brain, voxel-wise analyses of spatially standardized task and resting-state BOLD fMRI. Note that by “whole-brain” we mean cortex and subcortical structures but not cerebellum, because we expected those regions to fall outside of the field of view in a number of the BOLD datasets.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Pre-define the exclusion criteria according to the scope of the planned analysis, the placement of the QA/QC checkpoint along the neuroimaging workflow and what type of data are available in the datasets.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Write a clear description of each exclusion criteria in the SOPs (including how to deal with borderline cases).</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Make a <em>snapshot</em> of the current state of your SOPs and assign them a new <em>version</em> label (cf (here)[./index.md])</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Download the data locally using DataLad for version control.
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Create a standard operating procedures (SOPs) document for the study. The template https://github.com/nipreps/mriqc-sops has been design to facilitate this step.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Narrow down the scope of the planned analysis. Here, the planned analysis correponds to whole-brain, voxel-wise analyses of spatially standardized task and resting-state BOLD fMRI. Note that by “whole-brain” we mean cortex and subcortical structures but not cerebellum, because we expected those regions to fall outside of the field of view in a number of the BOLD datasets.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Pre-define the exclusion criteria according to the scope of the planned analysis, the placement of the QA/QC checkpoint along the neuroimaging workflow and what type of data are available in the datasets.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Write a clear description of each exclusion criteria in the SOPs (including how to deal with borderline cases).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Make a <em>snapshot</em> of the current state of your SOPs and assign them a new <em>version</em> label (cf (here)[./index.md])</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Download the data locally using DataLad for version control.
     <div class="highlight"><pre><span></span><code>cd /data/datasets/
 datalad clone &lt;url-to-data&gt;
 </code></pre></div></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Retrieve file content
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Retrieve file content
     <div class="highlight"><pre><span></span><code>cd /data/datasets/
 datalad get &lt;url-to-data&gt;
 </code></pre></div></li>
 </ul>
 <h2 id="image-processing">Image processing<a class="headerlink" href="#image-processing" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Image processing was carried out according to our protocol (Esteban et al. 2020)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Run MRIQC with a Docker container of its latest version 22.0.1. MRIQC generates one visual report per T1w image and per BOLD scan.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Once all the visual reports had been evaluated as indicated below (QC of the unprocessed data), run fMRIPrep with a Docker container of its latest version 22.0.0 only the data that survived the first QC checkpoint with MRIQC. fMRIPrep is executed with default settings, therefore, data are spatially standardized into the MNI152NLin2009cAsym space (Fonov et al. 2009) accessed with TemplateFlow (Ciric et al. 2022). fMRIPrep yielded preprocessed data and one individual QA/QC report per subject.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Image processing was carried out according to our protocol (Esteban et al. 2020)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Run MRIQC with a Docker container of its latest version 22.0.1. MRIQC generates one visual report per T1w image and per BOLD scan.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Once all the visual reports had been evaluated as indicated below (QC of the unprocessed data), run fMRIPrep with a Docker container of its latest version 22.0.0 only the data that survived the first QC checkpoint with MRIQC. fMRIPrep is executed with default settings, therefore, data are spatially standardized into the MNI152NLin2009cAsym space (Fonov et al. 2009) accessed with TemplateFlow (Ciric et al. 2022). fMRIPrep yielded preprocessed data and one individual QA/QC report per subject.</li>
 </ul>
 <h2 id="qc-of-unprocessed-data">QC of unprocessed data<a class="headerlink" href="#qc-of-unprocessed-data" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Inspect one-by-one the individual MRIQC visual reports of each BOLD scan first, following the reports’ ordering of visualizations. Once the full report had been visualized, return to specific sections of the report when a second assessment was necessary.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Report QC assessment on a spreadsheet table indicating which criteria led to exclusion.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Exclude the scans meeting the pre-defined exclusion criteria on unprocessed data.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Apply the same protocol to T1w images. Note that we do not impose exclusion criterion on the unprocessed T1w images, but we annotate subjects with visible artifacts in the T1w images in order to ensure rigorous scrutinizing of spatial normalization and surface reconstruction outputs from fMRIPrep (if both modalities passed the first QC checkpoint with MRIQC). We do this, because given the planned analysis, the T1w image will be used solely to guide the spatial alignment to the standard MNI152NLin2009cAsym template and to guide the co-registration of structural and functional (BOLD) images in fMRIPrep via the surface reconstructions. Besides, the latter preprocessing steps are relatively robust to structural images with mild artifacts.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Inspect one-by-one the individual MRIQC visual reports of each BOLD scan first, following the reports’ ordering of visualizations. Once the full report had been visualized, return to specific sections of the report when a second assessment was necessary.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Report QC assessment on a spreadsheet table indicating which criteria led to exclusion.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Exclude the scans meeting the pre-defined exclusion criteria on unprocessed data.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Apply the same protocol to T1w images. Note that we do not impose exclusion criterion on the unprocessed T1w images, but we annotate subjects with visible artifacts in the T1w images in order to ensure rigorous scrutinizing of spatial normalization and surface reconstruction outputs from fMRIPrep (if both modalities passed the first QC checkpoint with MRIQC). We do this, because given the planned analysis, the T1w image will be used solely to guide the spatial alignment to the standard MNI152NLin2009cAsym template and to guide the co-registration of structural and functional (BOLD) images in fMRIPrep via the surface reconstructions. Besides, the latter preprocessing steps are relatively robust to structural images with mild artifacts.</li>
 </ul>
 <h2 id="qc-of-minimally-preprocessed-data">QC of minimally preprocessed data<a class="headerlink" href="#qc-of-minimally-preprocessed-data" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Inspect one-by-one the individual reports from fMRIPrep for each participant,following the reports’ ordering of visualizations.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Report QC assessment on a spreadsheet table indicating which criteria led to exclusion.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> Exclude the scans meeting the pre-defined exclusion criteria on minimally preprocessed data.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Inspect one-by-one the individual reports from fMRIPrep for each participant,following the reports’ ordering of visualizations.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Report QC assessment on a spreadsheet table indicating which criteria led to exclusion.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Exclude the scans meeting the pre-defined exclusion criteria on minimally preprocessed data.</li>
 </ul>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
@@ -461,42 +462,6 @@ datalad get &lt;url-to-data&gt;
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../changes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Change History" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Change History
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../exclusion_criteria/" class="md-footer__link md-footer__link--next" aria-label="Next: Exclusion Criteria" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Exclusion Criteria
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -522,10 +487,10 @@ datalad get &lt;url-to-data&gt;
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../assets/javascripts/bundle.a51614de.min.js"></script>
       
     
   </body>
